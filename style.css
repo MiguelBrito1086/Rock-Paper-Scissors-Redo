@@ -7,7 +7,11 @@ body {
 }
 
 .decision {
-  margin-top: 3em;
+  height: 8em;
+  margin-top: 7em;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 div {
@@ -30,10 +34,19 @@ div {
   justify-content: center;
 }
 
+.vs {
+  height: 3em;
+}
+
 .vs p {
-  width: 20%;
+  width: 30%;
   text-align: center;
   font-family: 'Rock Salt', cursive;
+  margin: 0;
+}
+
+#VS {
+  /*padding-top:.75em;*/
 }
 
 .me {
@@ -44,13 +57,15 @@ div {
   font-family: 'VT323', monospace;
 }
 
-form {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+img {
+  height: 2em;
+  width: auto;
 }
 
-
+#myDraw {
+  display: flex;
+  justify-content: flex-end;
+}
 
 button {
   font-family: 'Nova Mono', monospace;

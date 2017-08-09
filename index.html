@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Rock Paper Scissors Redo</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Nova+Mono|Rock+Salt|Share+Tech+Mono|VT323" rel="stylesheet">
   </head>
   <body>
@@ -13,13 +13,15 @@
         <p class='comp'>Computer</p>
       </section>
       <section class='vs'>
-
+          <p id='myDraw'></p>
+          <p id='VS'>VS</p>
+          <p id='compDraw'></p>
       </section>
     </div>
     <div class="decision">
-        <button type="submit" class="rock" name="rock">Rock</button>
-        <button type="submit" class="paper" name="paper">Paper</button>
-        <button type="submit" class="scissors" name="scissors">Scissors</button>
+        <button type="submit" id="rock" name="rock">Rock</button>
+        <button type="submit" id="paper" name="paper">Paper</button>
+        <button type="submit" id="scissors" name="scissors">Scissors</button>
     </div>
     <script type="text/javascript" src="main.js"></script>
   </body>
