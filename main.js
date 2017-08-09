@@ -16,66 +16,90 @@ let rock = document.getElementById('rock')
 let paper = document.getElementById('paper')
 let scissors = document.getElementById('scissors')
 
-let me = document.addEventListener('click', image => {
-    let p = document.createElement('p')
-    let img = document.createElement('img')
+let userClick = choice => {
+  let p = document.createElement('p')
+  let img = document.createElement('img')
 
-    if (throws[i] === 'rock') {
-      img.src = "rock.gif"
+  if (scissors) {
+    img.src = `${choice}.png`
+  }
+
+  vs.appendChild(p)
+  p.appendChild(img)
+
+  // Call function that does computer move.
+}
+
+let me =
+    scissors.addEventListener('click', image => {
+      userClick('scissors')
+    })
+
+    rock.addEventListener('click', image => {
+        let p = document.createElement('p')
+        let img = document.createElement('img')
+
+        if (rock) {
+          img.src = "rock.gif"
+        }
+
+        vs.appendChild(p)
+        p.appendChild(img)
+    })
+
+    paper.addEventListener('click', image => {
+        let p = document.createElement('p')
+        let img = document.createElement('img')
+
+        if (paper) {
+          img.src = "paper.png"
+        }
+
+        vs.appendChild(p)
+        p.appendChild(img)
+    })
+
+//
+// document.getElementById(computer)Math.random("rock","paper","scissors")
+//
+// document.getElementById(me)Math.random("rock","paper","scissors")
+
+// let computer = "rock";
+// let me = "scissors"; // Change this to test your code
+let play = me.addEventListener
+
+    if (me === "rock" && computer === "rock") {
+      console.log("Looks like a tie!");
     }
-    if (paper) {
-      img.src = "paper.png"
-    }
-    if (scissors) {
-      img.src = "scissors.png"
+
+    if (me === "paper" && computer === "rock") {
+      console.log("I win!");
     }
 
-    vs.appendChild(p)
-    p.appendChild(img)
-})
+    if (me === "scissors" && computer === "rock") {
+      console.log("Computer wins!");
+    }
 
+    if (me === "rock" && computer === "paper") {
+      console.log("Computer wins!");
+    }
 
-// console.log('The computer chose', computer, 'and you chose', me)
-// //
-// // document.getElementById(computer)Math.random("rock","paper","scissors")
-// //
-// // document.getElementById(me)Math.random("rock","paper","scissors")
-//
-// // let computer = "rock";
-// // let me = "scissors"; // Change this to test your code
-//
-// if (me === "rock" && computer === "rock") {
-//   console.log("Looks like a tie!");
-// }
-//
-// if (me === "paper" && computer === "rock") {
-//   console.log("I win!");
-// }
-//
-// if (me === "scissors" && computer === "rock") {
-//   console.log("Computer wins!");
-// }
-//
-// if (me === "rock" && computer === "paper") {
-//   console.log("Computer wins!");
-// }
-//
-// if (me === "paper" && computer === "paper") {
-//   console.log("Looks like a tie!");
-// }
-//
-// if (me === "scissors" && computer === "paper") {
-//   console.log("I win!");
-// }
-//
-// if (me === "rock" && computer === "scissors") {
-//   console.log("I win!");
-// }
-//
-// if (me === "paper" && computer === "scissors") {
-//   console.log("Computer wins!");
-// }
-//
-// if (me === "scissors" && computer === "scissors") {
-//   console.log("Looks like a tie!");
-// }
+    if (me === "paper" && computer === "paper") {
+      console.log("Looks like a tie!");
+    }
+
+    if (me === "scissors" && computer === "paper") {
+      console.log("I win!");
+    }
+
+    if (me === "rock" && computer === "scissors") {
+      console.log("I win!");
+    }
+
+    if (me === "paper" && computer === "scissors") {
+      console.log("Computer wins!");
+    }
+
+    if (me === "scissors" && computer === "scissors") {
+      console.log("Looks like a tie!");
+    }
