@@ -23,13 +23,12 @@ div {
 .display section {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   font-size: 5em;
 }
 
 .titles p {
-  width: 25%;
   display: flex;
   justify-content: center;
 }
@@ -51,10 +50,13 @@ div {
 
 .me {
   font-family: 'Share Tech Mono', monospace;
+  margin-left: 12%;
+  margin-right: 2em;
 }
 
 .comp {
   font-family: 'VT323', monospace;
+  margin-left: 2em;
 }
 
 img {
@@ -67,6 +69,11 @@ img {
   justify-content: flex-end;
 }
 
+#compDraw {
+  display: flex;
+  justify-content: flex-start;
+}
+
 button {
   font-family: 'Nova Mono', monospace;
   background-color: #fff612;
@@ -75,4 +82,43 @@ button {
   padding: .5em;
   border-radius: 20px;
   width: 7em;
+}
+
+.tie {
+  -webkit-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+  position: relative;
+  top: -1.5em;
+  left: -.75em;
+  color: #f4ea0b;
+}
+
+.win {
+  -webkit-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+  position: relative;
+  top: -.5em;
+  color: #72f10e;
+}
+
+.lose {
+  -webkit-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+  position: relative;
+  top: -.75em;
+  left: -.75em;
+  color: #861e13;
+}
+
+#myPoints {
+  width: 1em;
+}
+
+.separator {
+  width: 1em;
+
+}
+
+#compPoints {
+  width: 1em;
 }
