@@ -44,19 +44,15 @@ div {
   margin: 0;
 }
 
-#VS {
-  /*padding-top:.75em;*/
-}
-
 .me {
   font-family: 'Share Tech Mono', monospace;
   margin-left: 12%;
-  margin-right: 2em;
+  margin-right: 2.5em;
 }
 
 .comp {
   font-family: 'VT323', monospace;
-  margin-left: 2em;
+  margin-left: 2.5em;
 }
 
 img {
@@ -66,12 +62,12 @@ img {
 
 #myDraw {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 #compDraw {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 button {
@@ -112,6 +108,7 @@ button {
 
 #myPoints {
   width: 1em;
+  margin-right: .5em;
 }
 
 .separator {
@@ -121,4 +118,5 @@ button {
 
 #compPoints {
   width: 1em;
+  margin-left: .5em;
 }

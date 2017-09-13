@@ -29,8 +29,10 @@ let userClick = choice => {
 
       compPick();
       results();
-      total();
-      }
+      let myPoints = 0;
+      let compPoints = 0;
+      setUp();
+    }
 
 let compPick = () => {
       let img = document.createElement('img')
@@ -66,32 +68,29 @@ let results = () => {
         setTimeout(() => {
           result.textContent = "Tie Game!!";
           result.className += "tie";
-        }, 500);
+        }, 400);
       }
 
       if ( (me === "paper" && computer === "rock") || (me === "rock" && computer === "scissors") || (me === "scissors" && computer === "paper") ) {
         setTimeout(() => {
           result.textContent = "You Win!!";
-          result.className += "win";
-        }, 500);
+          result.className += "win"; myPoints.textContent += 1;
+        }, 400);
       }
 
       if ( (me === "scissors" && computer === "rock") || (me === "rock" && computer === "paper") || (me === "paper" && computer === "scissors") ) {
         setTimeout(() => {
           result.textContent = "Computer Wins!!";
-          result.className += "lose";
-        }, 500);
+          result.className += "lose"; compPoints.textContent = (parseInt(compPoints.textContent) + 1);
+        }, 400);
       }
-}
+      console.log(typeof parseInt(compPoints.textContent));
+  }
 
-// let total = () => {
-//
-//     // let myPoints = 0;
-//     // let compPoints = 0;
-//
-//     if (result.textContent = 'win') {
-//       myPoints.textContent += 1
-//     } else {
-//       compPoints.textContent += 1
-//     }
-// }
+let setUp = () =>
+  setTimeout(() =>{
+    result.className = '';
+    result.textContent = 'VS';
+    vs.innerHTML = '';
+    comp.innerHTML = '';
+  }, 1600);
