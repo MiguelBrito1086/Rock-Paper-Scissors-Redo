@@ -106,17 +106,22 @@ button {
   color: #861e13;
 }
 
-#myPoints {
+#myWins {
   width: 1em;
   margin-right: .5em;
+  font-family: 'Rock Salt', cursive;
+  font-size: 46px;
+  padding-top: .5em;
 }
 
 .separator {
   width: 1em;
-
 }
 
-#compPoints {
+#compWins {
   width: 1em;
   margin-left: .5em;
+  font-family: 'Rock Salt', cursive;
+  font-size: 46px;
+  padding-top: .5em;
 }

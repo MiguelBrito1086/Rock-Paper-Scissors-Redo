@@ -4,11 +4,13 @@ let rock = document.getElementById('rock')
 let paper = document.getElementById('paper')
 let scissors = document.getElementById('scissors')
 let result = document.getElementById('VS')
-let myPoints = document.getElementById('myPoints')
-let compPoints = document.getElementById('compPoints')
+let myWins = document.getElementById('myWins')
+let compWins = document.getElementById('compWins')
 
 let me
 let computer
+let myScore = 0;
+let compScore = 0;
 
 
 function randomNess(min, max) {
@@ -29,8 +31,6 @@ let userClick = choice => {
 
       compPick();
       results();
-      let myPoints = 0;
-      let compPoints = 0;
       setUp();
     }
 
@@ -74,17 +74,18 @@ let results = () => {
       if ( (me === "paper" && computer === "rock") || (me === "rock" && computer === "scissors") || (me === "scissors" && computer === "paper") ) {
         setTimeout(() => {
           result.textContent = "You Win!!";
-          result.className += "win"; myPoints.textContent += 1;
+          myScore += 1;
+          result.className += "win"; myWins.textContent = myScore;
         }, 400);
       }
 
       if ( (me === "scissors" && computer === "rock") || (me === "rock" && computer === "paper") || (me === "paper" && computer === "scissors") ) {
         setTimeout(() => {
           result.textContent = "Computer Wins!!";
-          result.className += "lose"; compPoints.textContent = (parseInt(compPoints.textContent) + 1);
+          compScore += 1;
+          result.className += "lose"; compWins.textContent = compScore;
         }, 400);
       }
-      console.log(typeof parseInt(compPoints.textContent));
   }
 
 let setUp = () =>
